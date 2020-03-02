@@ -17,6 +17,7 @@ public class AddDependant{
 		driver.get("http://testingmasters.com/hrm/symfony/web/index.php/auth/login");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
+		//gggygsiodi
 		
 		driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys("User02");
 		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("TM1234");
