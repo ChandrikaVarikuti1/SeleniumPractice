@@ -36,11 +36,14 @@ public class AddDependant{
 		driver.findElement(By.xpath("//input[@id='dependent_name']")).sendKeys(dependant_name);
 		driver.findElement(By.xpath("//select[@id='dependent_relationshipType']")).click();
 		
-		//actions.moveToElement(driver.findElement(By.xpath("//select[@id='dependent_relationshipType']/option[text()='Child']"))).click().build().perform();
+		actions.moveToElement(driver.findElement(By.xpath("//select[@id='dependent_relationshipType']"))).click().build().perform();
 		
-		select=new Select(driver.findElement(By.xpath("//select[@id='dependent_relationshipType']")));
+		//select=new Select(driver.findElement(By.xpath("//select[@id='dependent_relationshipType']")));
 		
-		select.selectByVisibleText(dependant_relation);
+		//select.selectByVisibleText(dependant_relation);
+
+		driver.findElement(By.xpath("//select[@id='dependent_relationshipType']/option[text()='Child']")).click();
+		
 		driver.findElement(By.xpath("//input[@id='dependent_dateOfBirth']")).clear();
 		
 		driver.findElement(By.xpath("//input[@id='dependent_dateOfBirth']")).sendKeys(dependant_DateOfBirth);

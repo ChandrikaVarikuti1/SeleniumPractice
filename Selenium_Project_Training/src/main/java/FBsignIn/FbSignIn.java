@@ -49,11 +49,14 @@ public class FbSignIn {
 		WebElement gender_male=driver.findElement(By.xpath("//label[text()='Male']/preceding-sibling::input"));
 		isElementDisplayed(gender_male,"gender_male");
 		
-		WebElement gender_Custom=driver.findElement(By.xpath("//label[text()='Custome']/preceding-sibling::input"));
+		WebElement gender_Custom=driver.findElement(By.xpath("//label[text()='Custom']/preceding-sibling::input"));
 		isElementDisplayed(gender_Custom,"gender_Custom");
 		
 		WebElement Signup=driver.findElement(By.xpath("//button[@name='websubmit']"));
 		isElementDisplayed(Signup,"gender_Custom");
+		
+		WebElement txt=driver.findElement(By.xpath("//span[text()='Create an account']"));
+		isElementDisplayed(txt,"txt");
 		
 	}
 	
